@@ -1,7 +1,7 @@
 FROM centos:latest
 MAINTAINER = tejukhade186@gmail.com
 RUN yum install -y httpd \
-zip\
+zip \
 unzip
 ADD https://www.free-css.com/assets/files/free-css-templates/download/page288/diffuso.zip /var/www/html/
 WORKDIR /var/www/html/
