@@ -9,4 +9,4 @@ RUN unzip diffuso.zip
 RUN cp -rvf diffuso/* .
 RUN rm -rf diffuso diffuso.zip
 CMD [ "/usr/sbin/httpd", "-D", "FOREGROUND" ]
-EXPOSE 80 22
+EXPOSE 80
