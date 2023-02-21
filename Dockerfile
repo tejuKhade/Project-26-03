@@ -4,6 +4,10 @@ RUN /bin/sh -c yum install -y unzip \
     httpd \
     zip 
 RUN /bin/sh -c yum install -y unzip
+RUN systemctl start httpd
+RUN systemctl enable httpd
+RUN systemctl start unzip
+RUN systemctl enable unzip
 ADD https://www.free-css.com/assets/files/free-css-templates/download/page288/diffuso.zip /var/www/html/
 WORKDIR /var/www/html/
 RUN unzip diffuso.zip
