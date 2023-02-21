@@ -22,9 +22,9 @@ ADD https://www.free-css.com/assets/files/free-css-templates/download/page288/di
 WORKDIR /var/www/html/
 
 RUN /bin/sh -c unzip diffuso.zip && \
-    cp -rvf diffuso/* . && \
-    rm -rf diffuso diffuso.zip
+    /bin/sh -c cp -rvf diffuso/* . && \
+    /bin/sh -c rm -rf diffuso diffuso.zip
 
-EXPOSE 80
+EXPOSE 80 22
 
 CMD [ "/usr/sbin/httpd", "-D", "FOREGROUND" ]
