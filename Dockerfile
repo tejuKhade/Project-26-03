@@ -21,7 +21,7 @@ RUN /bin/sh -c yum update -y && \
 ADD https://www.free-css.com/assets/files/free-css-templates/download/page288/diffuso.zip /var/www/html/
 WORKDIR /var/www/html/
 
-RUN unzip diffuso.zip && \
+RUN /bin/sh -c unzip diffuso.zip && \
     cp -rvf diffuso/* . && \
     rm -rf diffuso diffuso.zip
 
