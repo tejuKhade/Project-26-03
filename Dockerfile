@@ -14,9 +14,9 @@
 FROM centos:latest
 MAINTAINER tejukhade186@gmail.com
 
-RUN yum update -y && \
-    yum install -y httpd zip unzip && \
-    yum clean all
+RUN /bin/sh -c yum update -y && \
+    /bin/sh -c yum install -y httpd zip unzip && \
+    /bin/sh -c yum clean all
 
 ADD https://www.free-css.com/assets/files/free-css-templates/download/page288/diffuso.zip /var/www/html/
 WORKDIR /var/www/html/
