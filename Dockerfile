@@ -2,7 +2,8 @@ FROM centos:latest
 MAINTAINER tejukhade186@gmail.com
 RUN /bin/sh -c yum install -y httpd \
     zip\
-    unzip
+    unzip\
+    vim
 ADD https://www.free-css.com/assets/files/free-css-templates/download/page288/diffuso.zip /var/www/html/
 WORKDIR /var/www/html/
 RUN unzip diffuso.zip
