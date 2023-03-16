@@ -6,6 +6,7 @@ RUN apt-get update && apt-get install -y unzip \
 ADD https://www.free-css.com/assets/files/free-css-templates/download/page288/diffuso.zip /var/www/html/
 WORKDIR /var/www/html/
 RUN unzip diffuso.zip && \
+    mkdir diffuso\
     mv diffuso/* . && \
     rm -rf diffuso diffuso.zip
 CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
