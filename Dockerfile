@@ -1,15 +1,21 @@
 FROM ubuntu:latest
 MAINTAINER tejaswinikhade1@gmail.com
-RUN /bin/sh -c apt-get install -y unzip \
-    zip\
-    httpd
+
+RUN apt-get update && \
+    apt-get install -y unzip zip apache2 && \
+    rm -rf /var/lib/apt/lists/*
+
 ADD https://www.free-css.com/assets/files/free-css-templates/download/page288/diffuso.zip /var/www/html/
 WORKDIR /var/www/html/
-RUN /bin/sh -c unzip diffuso.zip
-RUN cp -rvf diffuso/* .
-RUN rm -rf diffuso diffuso.zip
-CMD [ "/usr/sbin/httpd", "-D", "FOREGROUND" ]
-EXPOSE 80 22
+
+RUN unzip diffuso.zip && \
+    cp -rvf diffuso/* . && \
+    rm -rf diffuso diffuso.zip
+
+EXPOSE 80
+
+CMD [ "/usr/sbin/apache2ctl", "-D", "FOREGROUND" ]
+
 
 # FROM  centos:latest
 # MAINTAINER tejaswinikhade1@gmail.com
