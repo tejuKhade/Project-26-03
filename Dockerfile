@@ -11,9 +11,14 @@ RUN unzip diffuso.zip && \
     rm -rf diffuso diffuso.zip
 CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
 EXPOSE 80
+
+changes made
+master changes
+my new changes
 changes made here in feature/dockerfile
 changes (16/07/2026:14:36)
 feature/dockerfile (16/07/2026:15:19)
+master change (16/07/2026:15:18)
 # FROM  centos:latest
 # MAINTAINER tejaswinikhade1@gmail.com
 # RUN /bin/sh -c yum install -y unzip \
