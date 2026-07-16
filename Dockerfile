@@ -12,7 +12,7 @@ RUN unzip diffuso.zip && \
 CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
 EXPOSE 80
 changes made
-
+master changes
 my new changes
 # FROM  centos:latest
 # MAINTAINER tejaswinikhade1@gmail.com
