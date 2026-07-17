@@ -1,2 +1,3 @@
 line1
 line-main - added by main
+line2 - added by feature
